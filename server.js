@@ -10,7 +10,18 @@ app.use(express.static(path.join(__dirname,'public')));
 app.get('/', function (req, res) {
    res.sendFile(path.join(___dirname + '/index.html'));
 });
+
+app.get('/departments', function (req, res) {
+  res.sendFile(path.join(___dirname + '/departments.html'));
+});
  
+app.get('/aboutus', function (req, res) {
+  res.sendFile(path.join(___dirname + '/aboutus.html'));
+});
+
+app.get('/contact', function (req, res) {
+  res.sendFile(path.join(___dirname + '/contact.html'));
+});
 
 app.get('/hello', function (req, res) {
   console.log("CAlling rest api");
